@@ -82,7 +82,9 @@ main {
 
 .table {
   width: 100%;
-
+  thead {
+    background: #999999;
+  }
   th, td {
     border: 1px solid #ccc;
     padding: .5em;
@@ -90,12 +92,6 @@ main {
 
   td.right {
     text-align: right;
-  }
-
-  tr:nth-child(odd) {
-    td {
-      background: #efefef;
-    }
   }
 }
 

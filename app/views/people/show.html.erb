@@ -1,0 +1,15 @@
+<h1><%= @person.title %> <%= @person.first_name %> <%= @person.last_name %></h1>
+<a href="/people/<%= @person.id %>/edit"> Edit</a>
+
+<%= link_to "+ Add Location", new_person_assignment_path(@person) %>
+<table class="table">
+  <thead>
+  <tr>
+    <td>Location</td>
+    <td>Role</td>
+  </tr>
+  </thead>
+  <tbody>
+  <%= render partial: 'assignments/assignment', collection: @person.assignments %>
+  </tbody>
+</table>
